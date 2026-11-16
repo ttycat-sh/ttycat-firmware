@@ -19,16 +19,16 @@ It runs on the [Waveshare ESP32-C5-Touch-LCD-2.8](https://www.waveshare.com/esp3
 ```
  your agents ──> ttycat-daemon, on your Mac ──USB──> this firmware, on the board
                        ▲                                   │
-                 ttycat-app runs it                   taps go back
+                the Mac app runs it                   taps go back
 ```
 
-The board doesn't run agents and has no network connection. About once a second the Mac sends it what to show, and the board sends back what you tapped. ttycat is three open-source repos:
+The board doesn't run agents and has no network connection. About once a second the Mac sends it what to show, and the board sends back what you tapped. The firmware and the daemon are open source:
 
 | Repo | What it is |
 |---|---|
 | **ttycat-firmware** | This repo: the ESP-IDF firmware that draws the screens and talks to the Mac |
 | [ttycat-daemon](https://github.com/ttycat-sh/ttycat-daemon) | The Mac's side. It finds your agents, carries your answers back and flashes the board. It's here as the `daemon/` submodule |
-| [ttycat-app](https://github.com/ttycat-sh/ttycat-app) | The menu bar app, which runs the daemon and works without a board too |
+| The Mac app, from [ttycat.sh](https://www.ttycat.sh) | The menu bar app, which runs the daemon and works without a board too |
 
 ## What's on the screen
 
@@ -172,9 +172,7 @@ A tag makes a release: `vX.Y.Z` for everyone, and `vX.Y.Z-dev.N` for testing. `.
 
 ## Open source, and Pro
 
-Everything in the three repos is free and open source: seeing your agents, answering their prompts, notifications, the board and its firmware, and Bit. It's complete without anything else.
-
-The official download of the app adds paid features, kept in a separate private repository: usage and limits, a log of what agents did, other machines, and skins. They connect through two small interfaces, `plugins.py` in the daemon and `Extensions.swift` in the app, and the open code never depends on them.
+The firmware and the daemon are free and open source, and work without anything else: the daemon finds your agents, shows them on the board and carries your answers back. The Mac app, from [ttycat.sh](https://www.ttycat.sh), isn't open source. What it adds to the daemon joins through one small interface, `plugins.py`, and the daemon never depends on it.
 
 ## License
 

@@ -1,6 +1,6 @@
 # Third-party software
 
-What the firmware builds on, and under which license. Check this list before each release. What the Mac app carries is listed in [ttycat-app](https://github.com/ttycat-sh/ttycat-app/blob/main/THIRD_PARTY.md).
+What the firmware builds on, and under which license. Check this list before each release. What the Mac app carries is listed in the app itself, in `THIRD_PARTY.md` in its `Contents/Resources`.
 
 | What | Used for | License | Where |
 |---|---|---|---|
