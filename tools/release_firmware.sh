@@ -4,7 +4,7 @@
 #   build-release-image  its image, signed, which the app carries and the update server offers
 #   build-release-core   the same source as a core release, which the app builds for boards of people's own
 # Needs ESP-IDF in the shell (. export.sh), and the daemon: git submodule update --init daemon.
-# ttycat-app's release.sh won't go without all three.
+# The Mac app's release won't go without all three.
 set -eu
 cd "$(dirname "$0")/.."
 [ -f daemon/release.py ] || { echo "no daemon: git submodule update --init daemon" >&2; exit 1; }
